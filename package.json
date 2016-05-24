@@ -40,5 +40,14 @@
   "bugs": {
     "url": "https://github.com/krasimir/webpack-library-starter/issues"
   },
-  "homepage": "https://github.com/krasimir/webpack-library-starter"
+  "homepage": "https://github.com/krasimir/webpack-library-starter",
+  "dependencies": {
+    "babel": "^6.3.13",
+    "babel-core": "^6.1.18",
+    "babel-loader": "^6.1.0",
+    "eslint-loader": "^1.1.0",
+    "path": "^0.12.7",
+    "webpack": "^1.12.9",
+    "yargs": "^3.32.0"
+  }
 }
