@@ -10,11 +10,7 @@ clear.onclick = function() {
 enter.onclick = function() {
     lib.start({
         el: 'file',
-        url: 'url',
-        methed: 'POST',
-        type: 'jpg;png',
-        mulit: false,
-        size: 'size',
+        uri: './php/index.php',
         loading: function() {
             console.log('loading');
         },

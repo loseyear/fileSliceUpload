@@ -10,7 +10,8 @@ $fname = mb_convert_encoding($_POST['name'],"gbk","utf-8");
 $truename = mb_convert_encoding($_POST['trueName'],"gbk","utf-8");
 
 $path = "../";
-$dir = $path."source/".$truename."-".$fsize;
+//$dir = $path."source/".$truename."-".$fsize;
+$dir = $path."source";
 $save = $dir."/".$fname;
 if(!is_dir($dir))
 {

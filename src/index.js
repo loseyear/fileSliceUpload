@@ -3,16 +3,13 @@ export default class Library {
         this._name = 'Library';
         this._el = '';
         this._uri = 'uri';
-        this._methed = 'POST';
-        this._type = 'jpg;png';
-        this._mulit = false;
-        this._size = 'size';
     }
     get name() {
         return this._name;
     }
     start(data) {
-        var file;
+        var file,
+            uri = data.uri;
         var reader = new FileReader();
 
         this._el = document.getElementById(data.el);
@@ -53,16 +50,14 @@ export default class Library {
             fileData.append('totalCount', nFactCount);
             fileData.append('indexCount', nCountNum);
             fileData.append('totalCount', 1);
-            fileData.append('indexCount', 1);
+            fileData.append('indexCount', 0);
             fileData.append('trueName', file.name.substring(0, file.name.lastIndexOf('.')));
 
-//            console.log(file);
-//            console.log(fileData);
             if (reader.error) {
                 console.log(reader.error);
             } else {
                 xhr = new XMLHttpRequest();
-                xhr.open('POST', '../php/index.php', true);
+                xhr.open('POST', uri, true);
                 xhr.overrideMimeType('application/octet-stream');
                 xhr.send(fileData);
                 xhr.onreadystatechange = function () {
