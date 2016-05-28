@@ -1,11 +1,6 @@
 'use strict';
 var lib = new library;
 var enter = document.getElementById('enter');
-var clear = document.getElementById('clear');
-
-clear.onclick = function() {
-    lib.clear();
-}
 
 enter.onclick = function() {
     lib.start({
